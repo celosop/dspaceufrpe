@@ -86,7 +86,7 @@ spec:
           periodSeconds: 60
           timeoutSeconds: 2
       volumes:
-      - name: pgdata-vol
+      - name: "pgdata-vol"
         nfs:
           server: 172.16.64.238
           path: /mnt/hd1
