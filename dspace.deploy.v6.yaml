@@ -1,4 +1,5 @@
 # kubectl apply -f dspace.deploy.v6.yaml
+# kubectl get all -o wide
 # kubectl get pods -o wide
 # kubectl get services -o wide
 # kubectl port-forward service/dspace-service 8080:8080
