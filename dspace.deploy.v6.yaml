@@ -85,6 +85,11 @@ spec:
           initialDelaySeconds: 60
           periodSeconds: 60
           timeoutSeconds: 2
+      volumes:
+      - name: dspacedb
+        nfs:
+          server: 172.16.64.238
+          path: /mnt/hd1    
 ---
 apiVersion: v1
 kind: Service
@@ -171,3 +176,28 @@ spec:
           timeoutSeconds: 5
           periodSeconds: 120
         command: ['sh', '-c', '/dspace/bin/dspace database migrate; catalina.sh run']
+      volumes:
+      - name: assetstore
+        nfs: 
+          server: 172.16.64.238
+          path: /mnt/hd1
+      - name: solr-search
+        nfs: 
+          server: 172.16.64.238
+          path: /mnt/hd1
+      - name: my-local-config-map
+        nfs: 
+          server: 172.16.64.238
+          path: /mnt/hd1
+      - name: solr-authority
+        nfs: 
+          server: 172.16.64.238
+          path: /mnt/hd1
+      - name: solr-oai
+        nfs: 
+          server: 172.16.64.238
+          path: /mnt/hd1
+      - name: solr-statistics
+        nfs: 
+          server: 172.16.64.238
+          path: /mnt/hd1
