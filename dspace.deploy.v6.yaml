@@ -72,7 +72,7 @@ spec:
         - mountPath: "/pgdata"
           name: "pgdata-vol"
         env:
-        - name: PGDATA
+        - name: pgdata
           value: /pgdata
         readinessProbe:
           exec:
@@ -90,7 +90,7 @@ spec:
         nfs:
           server: 172.16.64.238
           path: /mnt/hd1
-      - name: PGDATA
+      - name: pgdata
         nfs:
           server: 172.16.64.238
           path: /mnt/hd1    
