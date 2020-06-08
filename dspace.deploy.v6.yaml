@@ -55,12 +55,12 @@ spec:
         app: dspacedb-app
     spec:
       volumes:
-      - name: "pgdata-vol"
+      - name: pgdata-vol
         # There is an outstanding bug that prevents PGDATA from being persisted on Windows.
         # But, if a linux hostPath is provided, the data will persist while Docker Desktop is running
         emptyDir: {}
         hostPath:
-          path: "/tmp/vols/pgdata"
+          path: /tmp/vols/pgdata
       containers:
       - image: celosop/dspace-postgres-pgcrypto
         name: dspacedb
@@ -69,8 +69,8 @@ spec:
           name: http
           protocol: TCP
         volumeMounts:
-        - mountPath: "/pgdata"
-          name: "pgdata-vol"
+        - mountPath: /pgdata
+          name: pgdata-vol
         env:
         - name: pgdata
           value: /pgdata
@@ -93,14 +93,14 @@ spec:
       #   persistentVolumeClaim:
       #     claimName: dspace-pv-claim
       volumes:
-      - name: "pgdata-vol"
+      - name: pgdata-vol
         nfs:
           server: 172.16.64.238
           path: /mnt/hd1
-      - name: pgdata
-        nfs:
-          server: 172.16.64.238
-          path: /mnt/hd1
+      # - name: pgdata
+      #   nfs:
+      #     server: 172.16.64.238
+      #     path: /mnt/hd1
 ---
 apiVersion: v1
 kind: Service
