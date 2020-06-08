@@ -187,6 +187,10 @@ spec:
           timeoutSeconds: 5
           periodSeconds: 120
         command: ['sh', '-c', '/dspace/bin/dspace database migrate; catalina.sh run']
+      volumes:
+      - name: assetstore
+        persistentVolumeClaim:
+          claimName: dspace-pv-claim
 #      volumes:
 #      - name: assetstore
 #        nfs: 
