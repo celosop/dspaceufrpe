@@ -100,7 +100,7 @@ spec:
       # - name: pgdata
       #   nfs:
       #     server: 172.16.64.238
-      #     path: /mnt/hd1    
+      #     path: /mnt/hd1
 ---
 apiVersion: v1
 kind: Service
