@@ -58,7 +58,7 @@ spec:
       - name: "pgdata-vol"
         # There is an outstanding bug that prevents PGDATA from being persisted on Windows.
         # But, if a linux hostPath is provided, the data will persist while Docker Desktop is running
-        #emptyDir: {}
+        emptyDir: {}
         hostPath:
           path: "/tmp/vols/pgdata"
       containers:
