@@ -191,31 +191,21 @@ spec:
       - name: assetstore
         persistentVolumeClaim:
           claimName: dspace-pv-claim
-#      volumes:
-#      - name: assetstore
-#        nfs: 
-#          server: 172.16.64.238
-#          path: /mnt/hd1
-#      - name: solr-search
-#        nfs: 
-#          server: 172.16.64.238
-#          path: /mnt/hd1
-#      - name: my-local-config-map
-#        nfs: 
-#          server: 172.16.64.238
-#          path: /mnt/hd1
-#      - name: solr-authority
-#        nfs: 
-#          server: 172.16.64.238
-#          path: /mnt/hd1
-#      - name: solr-oai
-#        nfs: 
-#          server: 172.16.64.238
-#          path: /mnt/hd1
-#      - name: solr-statistics
-#        nfs: 
-#          server: 172.16.64.238
-#          path: /mnt/hd1
+      - name: solr-search
+        persistentVolumeClaim:
+          claimName: dspace-pv-claim
+     - name: my-local-config-map
+        persistentVolumeClaim:
+          claimName: dspace-pv-claim
+     - name: solr-authority
+        persistentVolumeClaim:
+          claimName: dspace-pv-claim
+     - name: solr-oai
+        persistentVolumeClaim:
+          claimName: dspace-pv-claim
+     - name: solr-statistics
+        persistentVolumeClaim:
+          claimName: dspace-pv-claim
 ---
 apiVersion: v1
 kind: PersistentVolume
