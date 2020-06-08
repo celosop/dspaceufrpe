@@ -89,6 +89,9 @@ spec:
       - name: "pgdata-vol"
         persistentVolumeClaim:
           claimName: dspace-pv-claim
+      - name: pgdata
+        persistentVolumeClaim:
+          claimName: dspace-pv-claim
       # volumes:
       # - name: "pgdata-vol"
       #   nfs:
