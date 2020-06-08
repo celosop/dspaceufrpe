@@ -194,16 +194,16 @@ spec:
       - name: solr-search
         persistentVolumeClaim:
           claimName: dspace-pv-claim
-     - name: my-local-config-map
+      - name: my-local-config-map
         persistentVolumeClaim:
           claimName: dspace-pv-claim
-     - name: solr-authority
+      - name: solr-authority
         persistentVolumeClaim:
           claimName: dspace-pv-claim
-     - name: solr-oai
+      - name: solr-oai
         persistentVolumeClaim:
           claimName: dspace-pv-claim
-     - name: solr-statistics
+      - name: solr-statistics
         persistentVolumeClaim:
           claimName: dspace-pv-claim
 ---
