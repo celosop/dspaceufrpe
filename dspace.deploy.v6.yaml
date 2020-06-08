@@ -187,25 +187,25 @@ spec:
           timeoutSeconds: 5
           periodSeconds: 120
         command: ['sh', '-c', '/dspace/bin/dspace database migrate; catalina.sh run']
-      volumes:
-      - name: assetstore
-        persistentVolumeClaim:
-          claimName: dspace-pv-claim
-      - name: solr-search
-        persistentVolumeClaim:
-          claimName: dspace-pv-claim
-      - name: my-local-config-map
-        persistentVolumeClaim:
-          claimName: dspace-pv-claim
-      - name: solr-authority
-        persistentVolumeClaim:
-          claimName: dspace-pv-claim
-      - name: solr-oai
-        persistentVolumeClaim:
-          claimName: dspace-pv-claim
-      - name: solr-statistics
-        persistentVolumeClaim:
-          claimName: dspace-pv-claim
+      # volumes:
+      # - name: assetstore
+      #   persistentVolumeClaim:
+      #     claimName: dspace-pv-claim
+      # - name: solr-search
+      #   persistentVolumeClaim:
+      #     claimName: dspace-pv-claim
+      # - name: my-local-config-map
+      #   persistentVolumeClaim:
+      #     claimName: dspace-pv-claim
+      # - name: solr-authority
+      #   persistentVolumeClaim:
+      #     claimName: dspace-pv-claim
+      # - name: solr-oai
+      #   persistentVolumeClaim:
+      #     claimName: dspace-pv-claim
+      # - name: solr-statistics
+      #   persistentVolumeClaim:
+      #     claimName: dspace-pv-claim
 ---
 apiVersion: v1
 kind: PersistentVolume
