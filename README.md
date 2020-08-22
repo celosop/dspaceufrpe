@@ -6,7 +6,7 @@ kubectl apply -f https://raw.githubusercontent.com/celosop/dspaceufrpe/master/ds
 
 https://github.com/celosop/dspaceufrpe/blob/master/dspace.deploy.v6.yaml
 
-Checar o status(pode demorar uns 2 minutos para subir tudo) dos pods:
+Checar o status(pode demorar uns 10 minutos para subir tudo) dos pods:
 
 watch kubectl get all -o wide
 
@@ -31,7 +31,7 @@ kubectl apply -f https://raw.githubusercontent.com/celosop/dspaceufrpe/master/ds
 
 https://github.com/celosop/dspaceufrpe/blob/master/dspace.job.ingest.v6.yaml
 
-Checar o status(pode demorar uns 2 minutos para subir tudo) dos pods:
+Checar o status(pode demorar uns 10 minutos para subir tudo) dos pods:
 
 watch kubectl get all -o wide
 
