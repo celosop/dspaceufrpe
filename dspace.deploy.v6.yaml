@@ -96,11 +96,11 @@ spec:
       - name: pgdata-vol
         nfs:
           server: 172.16.64.238
-          path: /mnt/hd1
+          path: /mnt/hd2
       # - name: pgdata
       #   nfs:
       #     server: 172.16.64.238
-      #     path: /mnt/hd1
+      #     path: /mnt/hd2
 ---
 apiVersion: v1
 kind: Service
